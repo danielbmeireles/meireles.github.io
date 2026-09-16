@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Meireles | Senior SRE & Cloud Architect</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --accent-hover: #0284c7;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --tag-bg: #0f172a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .bio {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 750px;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border-color);
+            margin-left: 0.5rem;
+        }
+
+        .badges-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            align-items: center;
+        }
+
+        .badge-img {
+            height: 24px;
+            vertical-align: middle;
+            transition: transform 0.2s ease;
+        }
+
+        .badge-img:hover {
+            transform: translateY(-2px);
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .experience-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .company-date {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .job-desc {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .responsibilities {
+            margin-bottom: 1rem;
+            padding-left: 1.2rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .responsibilities li {
+            margin-bottom: 0.3rem;
+        }
+
+        .tags-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: var(--tag-bg);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .project-highlight {
+            background: rgba(56, 189, 248, 0.05);
+            border-left: 3px solid var(--accent);
+            padding: 0.8rem 1rem;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Daniel Meireles</h1>
+            <div class="subtitle">Senior Site Reliability Engineer & Cloud Solution Architect</div>
+            <p class="bio">
+                Nice to meet you! I'm a Senior Site Reliability Engineer based in Lisbon, Portugal. 
+                I design resilient, scalable cloud solutions backed by a solid infrastructure background and professional certifications. 
+                I love turning ideas into reality, shaping cloud systems, and driving solutions that boost security, compliance, cost efficiency, and time-to-value.
+            </p>
+        </header>
+
+        <section id="technologies">
+            <h2>Technologies</h2>
+            <div class="badges-flex">
+                <img class="badge-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MCIgaGVpZ2h0PSIyMCI+PHJlY3Qgd2lkdGg9IjkwIiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iIzU1NSIvPjxyZWN0IHg9IjM1IiB3aWR0aD0iNTUiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjRkNDNjI0Ii8+PHBhdGggZD0iTTAgMGg5MHYyMEgweiIgZmlsbD0ibm9uZSIvPjx0ZXh0IHg9IjE3LjUiIHk9IjE0IiBmaWxsPSIjZmZmIiBmb250LWZhbWlseT0iVmVyZGFuYSIgZm9udC1zaXplPSIxMSI+TGludXg8L3RleHQ+PHRleHQgeD0iNjIuNSIgeT0iMTQiIGZpbGw9IiMwMDAiIGZvbnQtZmFtaWx5PSJWZXJkYW5hIiBmb250LXNpemU9IjExIj5UdXg8L3RleHQ+PC9zdmc+" alt="Linux Tux">
+                <img class="badge-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAiIGhlaWdodD0iMjAiPjxyZWN0IHdpZHRoPSIxMTAiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjNTU1Ii8+PHJlY3QgeD0iNjUiIHdpZHRoPSI0NSIgaGVpZ2h0PSIyMCIgcng9IjMiIGZpbGw9IiM3QjQyQkMiLz48dGV4dCB4PSIzMi41IiB5PSIxNCIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9IlZlcmRhbmEiIGZvbnQtc2l6ZT0iMTEiPlRlcnJhZm9ybTwvdGV4dD48dGV4dCB4PSI4Ny41IiB5PSIxNCIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9IlZlcmRhbmEiIGZvbnQtc2l6ZT0iMTEiPnYxLjU8L3RleHQ+PC9zdmc+" alt="Terraform">
+                <img class="badge-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MCIgaGVpZ2h0PSIyMCI+PHJlY3Qgd2lkdGg9IjkwIiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iIzU1NSIvPjxyZWN0IHg9IjQwIiB3aWR0aD0iNTAiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjRkZFQzZFIi8+PHRleHQgeD0iMjAiIHk9IjE0IiBmaWxsPSIjZmZmIiBmb250LWZhbWlseT0iVmVyZGFuYSIgZm9udC1zaXplPSIxMSI+VmF1bHQ8L3RleHQ+PHRleHQgeD0iNjUiIHk9IjE0IiBmaWxsPSIjMDAwIiBmb250LWZhbWlseT0iVmVyZGFuYSIgZm9udC1zaXplPSIxMSI+Q2VydGlmaWVkPC90ZXh0Pjwvc3ZnPg==" alt="Vault">
+                <img class="badge-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMjAiPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjNTU1Ii8+PHJlY3QgeD0iNDUiIHdpZHRoPSI1NSIgaGVpZ2h0PSIyMCIgcng9IjMiIGZpbGw9IiMwMDg5RDYiLz48dGV4dCB4PSIyMi41IiB5PSIxNCIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9IlZlcmRhbmEiIGZvbnQtc2l6ZT0iMTEiPkF6dXJlPC90ZXh0Pjx0ZXh0IHg9IjcyLjUiIHk9IjE0IiBmaWxsPSIjZmZmIiBmb250LWZhbWlseT0iVmVyZGFuYSIgZm9udC1zaXplPSIxMSI+Q2xvdWQ8L3RleHQ+PC9zdmc+" alt="Azure">
+                <img class="badge-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMjAiPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjNTU1Ii8+PHJlY3QgeD0iNTUiIHdpZHRoPSI0NSIgaGVpZ2h0PSIyMCIgcng9IjMiIGZpbGw9IiM4OTJDQTAiLz48dGV4dCB4PSIyNy41IiB5PSIxNCIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9IlZlcmRhbmEiIGZvbnQtc2l6ZT0iMTEiPlBvZG1hbjwvdGV4dD48dGV4dCB4PSI3Ny41IiB5PSIxNCIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9IlZlcmRhbmEiIGZvbnQtc2l6ZT0iMTEiPk9DSTwvdGV4dD48L3N2Zz4=" alt="Podman">
+                <img class="badge-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMjAiPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjNTU1Ii8+PHJlY3QgeD0iNzUiIHdpZHRoPSI0NSIgaGVpZ2h0PSIyMCIgcng9IjMiIGZpbGw9IiMzMjZDRTUiLz48dGV4dCB4PSIzNy41IiB5PSIxNCIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9IlZlcmRhbmEiIGZvbnQtc2l6ZT0iMTEiPkt1YmVybmV0ZXM8L3RleHQ+PHRleHQgeD0iOTcuNSIgeT0iMTQiIGZpbGw9IiNmZmYiIGZvbnQtZmFtaWx5PSJWZXJkYW5hIiBmb250LXNpemU9IjExIj5rOHM8L3RleHQ+PC9zdmc+" alt="Kubernetes">
+                <img class="badge-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAiIGhlaWdodD0iMjAiPjxyZWN0IHdpZHRoPSIxMTAiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjNTU1Ii8+PHJlY3QgeD0iNjUiIHdpZHRoPSI0NSIgaGVpZ2h0PSIyMCIgcng9IjMiIGZpbGw9IiMxQ0U3ODMiLz48dGV4dCB4PSIzMi41IiB5PSIxNCIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9IlZlcmRhbmEiIGZvbnQtc2l6ZT0iMTEiPk5ldyBSZWxpYzwvdGV4dD48dGV4dCB4PSI4Ny41IiB5PSIxNCIgZmlsbD0iIzAwMCIgZm9udC1mYW1pbHk9IlZlcmRhbmEiIGZvbnQtc2l6ZT0iMTEiPkFQTTwvdGV4dD48L3N2Zz4=" alt="New Relic">
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="badges-flex">
+                <img class="badge-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAiIGhlaWdodD0iMjAiPjxyZWN0IHdpZHRoPSIxMTAiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjNTU1Ii8+PHJlY3QgeD0iNjUiIHdpZHRoPSI0NSIgaGVpZ2h0PSIyMCIgcng9IjMiIGZpbGw9IiM3QjQyQkMiLz48dGV4dCB4PSIzMi41IiB5PSIxNCIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9IlZlcmRhbmEiIGZvbnQtc2l6ZT0iMTEiPlRlcnJhZm9ybTwvdGV4dD48dGV4dCB4PSI4Ny41IiB5PSIxNCIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9IlZlcmRhbmEiIGZvbnQtc2l6ZT0iMTEiPnYxLjU8L3RleHQ+PC9zdmc+" alt="Terraform Associate">
+                <img class="badge-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MCIgaGVpZ2h0PSIyMCI+PHJlY3Qgd2lkdGg9IjkwIiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iIzU1NSIvPjxyZWN0IHg9IjQwIiB3aWR0aD0iNTAiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjRkZFQzZFIi8+PHRleHQgeD0iMjAiIHk9IjE0IiBmaWxsPSIjZmZmIiBmb250LWZhbWlseT0iVmVyZGFuYSIgZm9udC1zaXplPSIxMSI+VmF1bHQ8L3RleHQ+PHRleHQgeD0iNjUiIHk9IjE0IiBmaWxsPSIjMDAwIiBmb250LWZhbWlseT0iVmVyZGFuYSIgZm9udC1zaXplPSIxMSI+Q2VydGlmaWVkPC90ZXh0Pjwvc3ZnPg==" alt="Vault Associate">
+                <img class="badge-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTAiIGhlaWdodD0iMjAiPjxyZWN0IHdpZHRoPSIxMTAiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjNTU1Ii8+PHJlY3QgeD0iMzUiIHdpZHRoPSI3NSIgaGVpZ2h0PSIyMCIgcng9IjMiIGZpbGw9IiNFOTU0MjAiLz48dGV4dCB4PSIxNy41IiB5PSIxNCIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9IlZlcmRhbmEiIGZvbnQtc2l6ZT0iMTEiPkxQSTwvdGV4dD48dGV4dCB4PSI3Mi41IiB5PSIxNCIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9IlZlcmRhbmEiIGZvbnQtc2l6ZT0iMTEiPkxQSUMtMS8yPC90ZXh0Pjwvc3ZnPg==" alt="LPIC Certification">
+                <img class="badge-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMjAiPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjNTU1Ii8+PHJlY3QgeD0iNDUiIHdpZHRoPSI1NSIgaGVpZ2h0PSIyMCIgcng9IjMiIGZpbGw9IiMwMDg5RDYiLz48dGV4dCB4PSIyMi41IiB5PSIxNCIgZmlsbD0iI2ZmZiIgZm9udC1mYW1pbHk9IlZlcmRhbmEiIGZvbnQtc2l6ZT0iMTEiPkF6dXJlPC90ZXh0Pjx0ZXh0IHg9IjcyLjUiIHk9IjE0IiBmaWxsPSIjZmZmIiBmb250LWZhbWlseT0iVmVyZGFuYSIgZm9udC1zaXplPSIxMSI+Q2xvdWQ8L3RleHQ+PC9zdmc+" alt="Azure Certified">
+                <img class="badge-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MCIgaGVpZ2h0PSIyMCI+PHJlY3Qgd2lkdGg9IjkwIiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iIzU1NSIvPjxyZWN0IHg9IjM1IiB3aWR0aD0iNTUiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjRkY5OTAwIi8+PHRleHQgeD0iMTcuNSIgeT0iMTQiIGZpbGw9IiNmZmYiIGZvbnQtZmFtaWx5PSJWZXJkYW5hIiBmb250LXNpemU9IjExIj5BV1M8L3RleHQ+PHRleHQgeD0iNjIuNSIgeT0iMTQiIGZpbGw9IiMwMDAiIGZvbnQtZmFtaWx5PSJWZXJkYW5hIiBmb250LXNpemU9IjExIj5QYXJ0bmVyPC90ZXh0Pjwvc3ZnPg==" alt="AWS Certified">
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+
+                <!-- INSCALE -->
+                <div class="experience-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Sr. Site Reliability Engineer (Observability)</div>
+                            <div>INSCALE</div>
+                        </div>
+                        <div class="company-date">2026 – Present</div>
+                    </div>
+                    <p class="job-desc">
+                        Focused on Observability, applying software engineering rigor to telemetry, insights, and system understanding. Designing, building, and maintaining platforms that provide deep visibility into complex distributed systems.
+                    </p>
+                    <ul class="responsibilities">
+                        <li>Take technical ownership of the observability stack (metrics, logging, tracing, alerting) and drive strategic design.</li>
+                        <li>Develop automation and foundational tooling for observability data pipelines, dashboards, and alert lifecycle management.</li>
+                        <li>Architect and maintain centralized monitoring, alerting, and performance analysis platforms.</li>
+                        <li>Own observability aspects of incident lifecycles, optimizing alerting for rapid response and data-driven post-mortems.</li>
+                    </ul>
+                    <div class="tags-title">Technologies</div>
+                    <div class="tags">
+                        <span class="tag">Terraform</span>
+                        <span class="tag">Akamai CDN</span>
+                        <span class="tag">New Relic</span>
+                        <span class="tag">Splunk</span>
+                        <span class="tag">AWS WAF & Shield</span>
+                        <span class="tag">AppMonitor</span>
+                    </div>
+                    <div class="project-highlight">
+                        <strong>Project Highlight:</strong> Observability Engineer for JYSK, one of Europe's leading home and living retailers. 🛏️
+                    </div>
+                </div>
+
+                <!-- Zoi -->
+                <div class="experience-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Cloud Solution Architect</div>
+                            <div>Zoi</div>
+                        </div>
+                        <div class="company-date">2024 – 2025</div>
+                    </div>
+                    <p class="job-desc">
+                        Designed and implemented cloud computing solutions, bridging the gap between complex business requirements and cloud technology capabilities.
+                    </p>
+                    <ul class="responsibilities">
+                        <li>Designed cloud architectures considering scalability, security, cost, and performance.</li>
+                        <li>Created migration strategies and developed best practices & architectural guidelines.</li>
+                        <li>Optimized cloud costs and resource utilization (FinOps).</li>
+                    </ul>
+                    <div class="tags-title">Technologies</div>
+                    <div class="tags">
+                        <span class="tag">Azure Well-Architected Framework</span>
+                        <span class="tag">Terraform</span>
+                        <span class="tag">Checkov</span>
+                        <span class="tag">Infracost</span>
+                        <span class="tag">Microsoft Defender for Cloud</span>
+                    </div>
+                    <div class="project-highlight">
+                        <strong>Project Highlight:</strong> Cloud Data Center implementation for the world's largest commercial vehicle manufacturer 🚛
+                    </div>
+                </div>
+
+                <!-- tb.lx / SRE -->
+                <div class="experience-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Site Reliability Engineer</div>
+                            <div>tb.lx by Daimler Trucks & Buses</div>
+                        </div>
+                        <div class="company-date">2019 – 2023</div>
+                    </div>
+                    <p class="job-desc">
+                        Applied software engineering principles to infrastructure and operations problems, creating highly reliable, scalable, and efficient systems.
+                    </p>
+                    <ul class="responsibilities">
+                        <li>Built and maintained infrastructure automation and container orchestration systems.</li>
+                        <li>Implemented monitoring, alerting, and metrics analysis to reduce operational toil.</li>
+                        <li>Refined incident response procedures and on-call policies.</li>
+                    </ul>
+                    <div class="tags-title">Technologies</div>
+                    <div class="tags">
+                        <span class="tag">Terraform</span>
+                        <span class="tag">Bicep / ARM</span>
+                        <span class="tag">Docker / Podman</span>
+                        <span class="tag">Azure Kubernetes Service (AKS)</span>
+                        <span class="tag">Grafana</span>
+                        <span class="tag">Prometheus</span>
+                    </div>
+                    <div class="project-highlight">
+                        <strong>Project Highlight:</strong> tb.lx Platform (Internal Developer Platform) & Truck API (Daimler's SSoT for APIs) 🌎️
+                    </div>
+                </div>
+
+                <!-- Capgemini -->
+                <div class="experience-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Infrastructure Specialist</div>
+                            <div>Capgemini</div>
+                        </div>
+                        <div class="company-date">2014 – 2019</div>
+                    </div>
+                    <p class="job-desc">
+                        Managed, maintained, and secured enterprise IT infrastructure, ensuring smooth system operations and disaster recovery capabilities.
+                    </p>
+                    <ul class="responsibilities">
+                        <li>Installed and maintained server hardware, OS (Red Hat Enterprise Linux, Windows Server), and virtual networks.</li>
+                        <li>Implemented security patches, updates, backups, and disaster recovery procedures.</li>
+                    </ul>
+                    <div class="tags-title">Technologies</div>
+                    <div class="tags">
+                        <span class="tag">IBM Power Systems</span>
+                        <span class="tag">RHEL</span>
+                        <span class="tag">VMware vCenter</span>
+                        <span class="tag">Ansible / Puppet</span>
+                        <span class="tag">IBM TSM</span>
+                    </div>
+                    <div class="project-highlight">
+                        <strong>Project Highlight:</strong> Central Bank of Brazil (BACEN) infrastructure team — managing & optimizing on-premises infrastructure 🏦
+                    </div>
+                </div>
+
+                <!-- IBM -->
+                <div class="experience-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Power Systems Specialist</div>
+                            <div>IBM</div>
+                        </div>
+                        <div class="company-date">2009 – 2014</div>
+                    </div>
+                    <p class="job-desc">
+                        Subject matter expert for enterprise clients on IBM Power Systems platforms and virtualization technologies.
+                    </p>
+                    <ul class="responsibilities">
+                        <li>Managed system installation, upgrades, performance tuning, and integration for enterprise clients.</li>
+                        <li>Handled High Availability solutions (PowerHA SystemMirror) and Virtualization (VIOS).</li>
+                    </ul>
+                    <div class="tags-title">Technologies</div>
+                    <div class="tags">
+                        <span class="tag">IBM Power Systems</span>
+                        <span class="tag">AIX</span>
+                        <span class="tag">PowerVM / PowerVC</span>
+                        <span class="tag">HMC</span>
+                        <span class="tag">PowerHA</span>
+                    </div>
+                    <div class="project-highlight">
+                        <strong>Project Highlight:</strong> IBM CAC (Centro de Atendimento ao Cliente) enterprise-level support ☎️
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Daniel Meireles. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
